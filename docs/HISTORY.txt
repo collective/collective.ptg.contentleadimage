@@ -4,4 +4,6 @@ Changelog
 1.0 (2012/08/14)
 ----------------
 
+- Added i18n support [macagua]
+
 - Initial release

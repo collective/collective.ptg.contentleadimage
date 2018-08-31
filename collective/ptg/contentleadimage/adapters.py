@@ -15,6 +15,10 @@ from collective.plonetruegallery.interfaces import IImageInformationRetriever, I
 
 from collective.contentleadimage.interfaces import ILeadImageable
 from collective.contentleadimage.config import IMAGE_FIELD_NAME
+from zope.i18nmessageid import MessageFactory
+
+_ = MessageFactory('collective.ptg.contentleadimage')
+
 
 from .interfaces import IContentLeadImageAdapter, IContentLeadImageGallerySettings
 
@@ -23,7 +27,7 @@ class ContentLeadImageAdapter(BasicAdapter):
     """ Just the basic class works, just define own interfaces """
     implements(IContentLeadImageAdapter, IGalleryAdapter)
     name = "contentleadimage"
-    description = "Use Plone, ContentLeadImages enabled"
+    description = _(u"label_contentleadimage_gallerytype", default=u"Use Plone, ContentLeadImages enabled")
 
     schema = IContentLeadImageGallerySettings
 
